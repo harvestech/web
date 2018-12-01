@@ -65,4 +65,6 @@ gulp.task("watch", function() {
 
 
 // Запуск тасков по умолчанию
-gulp.task("default", ["html", "sass", "scripts", "imgs", "watch"]);
+//gulp.task("default", ["html", "scripts", "imgs", "watch"]);
+
+gulp.task('default', gulp.series('html', 'scripts', 'imgs', 'watch'));
